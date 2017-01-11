@@ -17,6 +17,8 @@ public class TrainingRestController {
 		Random r = new Random();
 		session.setAttribute("boot:" + r.nextLong(), UUID.randomUUID()
 				.toString());
+		session.setAttribute("loginToken","123");
+		session.setAttribute("password","123456"); //代表登录缓存了数据
 		return "rest:controller:hello:world";
 	}
 
